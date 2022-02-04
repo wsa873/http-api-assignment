@@ -20,14 +20,19 @@
           break;
         case 401:
           content.innerHTML = '<b>Unauthorized</b>';
+          break;
         case 403:
           content.innerHTML = '<b>Forbidden</b>';
+          break;
         case 500:
           content.innerHTML = '<b>Internal Server Error</b>';
+          break;
         case 501:
           content.innerHTML = '<b>Not Implemented</b>';
+          break;
         case 404:
           content.innerHTML = '<b>Not Found</b>';
+          break;
         default:
           content.innerHTML = '<p>Status code not implemented by client</p>';
           break;

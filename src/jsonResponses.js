@@ -93,7 +93,7 @@ const unauthorized = (request, response, acceptedTypes, params) => {
 const forbidden = (request, response, acceptedTypes) => {
     const responseJSON = {
         message: 'You do not have access to this content.',
-        id ='forbidden',
+        id: 'forbidden',
     };
 
     if(acceptedTypes[0] === 'text/xml') {
@@ -109,7 +109,7 @@ const forbidden = (request, response, acceptedTypes) => {
 const internal = (request, response, acceptedTypes) => {
     const responseJSON = {
         message: 'Internal Server Error. Something went wrong.',
-        id = 'internalError',
+        id: 'internalError',
     };
 
     if(acceptedTypes[0] === 'text/xml') {
@@ -125,7 +125,7 @@ const internal = (request, response, acceptedTypes) => {
 const notImplemented = (request, response, acceptedTypes) => {
     const responseJSON = {
         message: 'This page has not been implemented yet. Check back later for updates.',
-        id = 'notImplemented',
+        id: 'notImplemented',
     };
 
     if(acceptedTypes[0] === 'text/xml') {
@@ -141,7 +141,7 @@ const notImplemented = (request, response, acceptedTypes) => {
 const notFound = (request, response, acceptedTypes) => {
     const responseJSON = {
         message: 'The page you are looking for does not exist.',
-        id = 'notFound',
+        id: 'notFound',
     };
 
     if(acceptedTypes[0] === 'text/xml') {
