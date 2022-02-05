@@ -64,12 +64,12 @@ const badRequest = (request, response, acceptedTypes, params) => {
 const unauthorized = (request, response, acceptedTypes, params) => {
     const responseJSON = {
         message: 'This request has the required parameters.',
-        id: 'unauthorizedMissingParam',
     };
 
-    if(!params.valid || params.valid !== 'true')
+    if(!params.loggedIn || params.loggedIn !== 'yes')
     {
         responseJSON.message = 'Missing loggedIn query parameter set to yes';
+        responseJSON.id = 'unauthorizedMissingParam';
         if(acceptedTypes[0] === 'text/xml')
         {
             const xmlString = `<response><message>${responseJSON.message}</message><id>${responseJSON.id}</id></response>`;
